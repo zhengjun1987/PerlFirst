@@ -25,5 +25,46 @@ use 5.012;
 
 # 	open LOG,'>','log';
 # 	print LOG "Captain's log:stardate 3.14159";
-# 	print STDERR ("%d percent complete.",27);
+# 	printf STDERR ("%d percent complete.",27);
 # 	close LOG;
+# 
+# 			================================================================================
+# 			2018年8月4日 23:47:24
+# 			~/Desktop/PerlFirst/chapter05files.pl
+# 			--------------------------------------------------------------------------------
+# 			27 percent complete.
+
+# 	open LOG,'>>','log';
+# 	select LOG;
+# 	print "\n吾家洗砚池头树，个个花开淡墨痕。";
+# 	print "\n不要人夸颜色好，只留清气满乾坤。\n";
+# 	$| = 1;
+# 	select STDOUT;
+# 	print LOG "苦海泛起爱恨，在世间难逃避命运";
+# 	print "苦海泛起爱恨，在世间难逃避命运";
+# 	close LOG;
+# 
+# 			================================================================================
+# 			2018年8月5日 00:25:37
+# 			~/Desktop/PerlFirst/chapter05files.pl
+# 			--------------------------------------------------------------------------------
+# 			苦海泛起爱恨，在世间难逃避命运
+
+# 	my $dividend = 3;
+# 	while ($dividend > -3){
+# 		if ($dividend <= 0){
+# 			die "0 不能作为除数！".$!;
+# 		} else {
+# 			say "\$dividend = ".$dividend;
+# 		}
+# 		$dividend--;
+# 	}
+# 			================================================================================
+# 			2018年8月5日 00:41:40
+# 			~/Desktop/PerlFirst/chapter05files.pl
+# 			--------------------------------------------------------------------------------
+# 			$dividend = 3
+# 			$dividend = 2
+# 			$dividend = 1
+# 			0 不能作为除数！ at /Users/zhengjun/Desktop/PerlFirst/chapter05files.pl line 56.
+
