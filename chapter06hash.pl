@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-use 5.014;
+use 5.010;
 
 my %family_name;
 $family_name{'fred'} = 'flintstone';
@@ -47,6 +47,11 @@ say "@v";
 # 		fred dino barney betty
 # 		flintstone  rubble rubble
 
-my $key,$value;
-while (($key,$value) = each %last_name){
+my $key1,$value1 = ();
+while (($key1,$value1) = each %last_name){
+	say "$key1 => $value1";
 }
+# 		fred => flintstone
+# 		dino => 
+# 		barney => rubble
+# 		betty => rubble
