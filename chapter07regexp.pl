@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 use 5.010;
-$_ = 'yabba dabba doo';
+$_ = "yabba dabba doo";
 if(/abba/){
 	print "It matched!\n";
 }
@@ -33,7 +33,19 @@ if(/y(....) d\1/){
 	print 'y(....) d\1匹配成功'."\n";
 }
 
-if(/(((.)(.)\3\2) d)\1/){
-	print '((.)(.)\3\2) d)\1匹配成功'."\n";
+if(/y((.)(.)\g{-1}\g{-2}) d\g{1}/){
+	print 'y((.)(.)\g{-1}\g{-2}) d\g{1}匹配成功'."\n";
+} else {
+	print 'y((.)(.)\g{-1}\g{-2}) d\g{1}匹配不成功'."\n";
 }
-# y(....) d\1匹配成功
+# 		================================================================================
+# 		2018年8月8日 00:43:58
+# 		~/Desktop/PerlFirst/chapter07regexp.pl
+# 		--------------------------------------------------------------------------------
+# 		y(....) d\1匹配成功
+# 		y((.)(.)\g{-1}\g{-2}) d\g{1}匹配成功
+
+$_ = 'HAL-9000 requires authorization to continue.';
+if(/HAL-[0-9]+/){
+	print "The string metions some model of HAL computer.\n";
+}
