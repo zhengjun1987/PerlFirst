@@ -30,10 +30,14 @@ foreach (@people){
 }
 #        I've seen you somewhere before, barney
 
-for(my $i = 1;$i < 128;$i++){
-    say "$i 要上班！" if $i & 1 << 4;
-}
-say '$i = '.$i if defined($i);
+
+#
+#    for(my $i = 1;$i < 128;$i++){
+#        say "$i 要上班！" if $i & 1 << 4;
+#    }
+#    say '$i = '.$i if defined($i);
+
+
 
 #    while(<STDIN>){
 #        if(/_END_/){
@@ -202,18 +206,40 @@ say '$i = '.$i if defined($i);
 #        What is your size of feet?
 #        39
 #        Your shoe size is media
+#
 
-my %dessert;
-say "How many cakes are ready?";
-$dessert{'cake'} = chomp(<STDIN>);
-say "How many ice creams are ready?";
-$dessert{'ice cream'} = chomp(<STDIN>);
 
-if($dessert{'cake'} && $dessert{'ice cream'}){
-    say "Hooray!Cake and ice cream!";
-}
-elsif($dessert{'cake'} && $dessert{'ice cream'}){
-    say "That's still good.";
-} else {
-    say "Hmm...";
-}
+#    my %dessert;
+#    say "How many cakes are ready?";
+#    chomp($_ = <STDIN>);
+#    $dessert{'cake'} = $_;
+#    say "How many ice creams are ready?";
+#    chomp($_ = <STDIN>);
+#    $dessert{'ice cream'} = $_;
+#
+#    foreach (keys %dessert){
+#        say "$_ => $dessert{$_}";
+#    }
+#
+#    if($dessert{'cake'} && $dessert{'ice cream'}){
+#        say "Hooray!Cake and ice cream!";
+#    }
+#    elsif($dessert{'cake'} || $dessert{'ice cream'}){
+#        say "That's still good.";
+#    } else {
+#        say "Hmm...";
+#    }
+#
+#                How many cakes are ready?
+#                1
+#                How many ice creams are ready?
+#                0
+#                ice cream => 0
+#                cake => 1
+#                That's still good.
+#
+#    my $barney = $seen{'barney'} // "barney";
+#    my $tom = $seen{'tom'} // 'tom';
+#    say "\$barney = $barney, \$tom = $tom";
+#
+#                $barney = 2, $tom = tom
